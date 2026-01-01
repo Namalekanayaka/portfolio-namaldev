@@ -151,7 +151,7 @@ export default function Experience() {
 
             <ErrorBoundary fallback={null}>
                 <Float speed={0.5} rotationIntensity={0.1} floatIntensity={0.2}>
-                    <HeroStage />
+                    <HeroStage isMobile={isMobile} />
                 </Float>
             </ErrorBoundary>
 

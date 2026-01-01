@@ -15,7 +15,7 @@ function CharacterWrapper() {
     )
 }
 
-export default function HeroStage() {
+export default function HeroStage({ isMobile }) {
     return (
         <group position={[0, -1.5, 0]}>
             {/* Cinematic Lighting Setup is in Experience.jsx, but we add local rim lights/glows here if needed */}
@@ -25,24 +25,25 @@ export default function HeroStage() {
                 <CharacterWrapper />
             </group>
 
-            {/* PODIUM / FLOOR */}
-            {/* A gloss reflector floor for that premium showroom look */}
-            <group position={[0, -1.05, 0]}>
-                <Cylinder args={[3, 3, 0.1, 64]} receiveShadow>
-                    <MeshReflectorMaterial
-                        blur={[300, 100]}
-                        resolution={1024}
-                        mixBlur={1}
-                        mixStrength={40}
-                        roughness={0.5} // slightly glossy
-                        depthScale={1.2}
-                        minDepthThreshold={0.4}
-                        maxDepthThreshold={1.4}
-                        color="#101010"
-                        metalness={0.5}
-                    />
-                </Cylinder>
-            </group>
+            {/* PODIUM / FLOOR - Hidden on Mobile to remove "Ash Background" */}
+            {!isMobile && (
+                <group position={[0, -1.05, 0]}>
+                    <Cylinder args={[3, 3, 0.1, 64]} receiveShadow>
+                        <MeshReflectorMaterial
+                            blur={[300, 100]}
+                            resolution={1024}
+                            mixBlur={1}
+                            mixStrength={40}
+                            roughness={0.5} // slightly glossy
+                            depthScale={1.2}
+                            minDepthThreshold={0.4}
+                            maxDepthThreshold={1.4}
+                            color="#101010"
+                            metalness={0.5}
+                        />
+                    </Cylinder>
+                </group>
+            )}
         </group>
     )
 }
