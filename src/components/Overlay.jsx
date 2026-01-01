@@ -231,18 +231,9 @@ export default function Overlay() {
                     <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-bold mb-6">
                         Let's Talk
                     </motion.h2>
-                    <motion.p variants={fadeUp} className="text-xl text-slate-300 mb-6">
+                    <motion.p variants={fadeUp} className="text-xl text-slate-300 mb-12">
                         Got an idea? I'm available for freelance work and internships.
                     </motion.p>
-
-                    <motion.div variants={fadeUp} className="mb-10 flex flex-col md:flex-row items-center justify-center gap-6 text-lg">
-                        <a href="mailto:namalekanayake412@gmail.com" className="flex items-center gap-2 text-blue-300 hover:text-white transition-colors">
-                            <span className="text-xl">✉️</span> namalekanayake412@gmail.com
-                        </a>
-                        <a href="tel:0758861764" className="flex items-center gap-2 text-blue-300 hover:text-white transition-colors">
-                            <span className="text-xl">📞</span> 075 8861764
-                        </a>
-                    </motion.div>
 
                     <motion.form
                         ref={form}
@@ -286,10 +277,12 @@ export default function Overlay() {
                         </button>
                     </motion.form>
 
-                    <motion.div variants={fadeUp} className="mt-12 flex justify-center gap-8 opacity-50">
+                    <motion.div variants={fadeUp} className="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-8 opacity-70">
+                        <a href="mailto:namalekanayake412@gmail.com" className="hover:text-blue-400 transition-colors">namalekanayake412@gmail.com</a>
+                        <a href="tel:0758861764" className="hover:text-blue-400 transition-colors">075 8861764</a>
+                        <span className="hidden md:block text-white/20">|</span>
                         <a href="https://github.com/Namalekanayaka" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">GitHub</a>
                         <a href="https://www.linkedin.com/in/namal-ekanayake-436a42266" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">LinkedIn</a>
-                        <a href="#" className="hover:text-blue-400 transition-colors">Instagram</a>
                     </motion.div>
                 </motion.div>
             </Section>
