@@ -231,9 +231,18 @@ export default function Overlay() {
                     <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-bold mb-6">
                         Let's Talk
                     </motion.h2>
-                    <motion.p variants={fadeUp} className="text-xl text-slate-300 mb-12">
+                    <motion.p variants={fadeUp} className="text-xl text-slate-300 mb-6">
                         Got an idea? I'm available for freelance work and internships.
                     </motion.p>
+
+                    <motion.div variants={fadeUp} className="mb-10 flex flex-col md:flex-row items-center justify-center gap-6 text-lg">
+                        <a href="mailto:namalekanayake412@gmail.com" className="flex items-center gap-2 text-blue-300 hover:text-white transition-colors">
+                            <span className="text-xl">✉️</span> namalekanayake412@gmail.com
+                        </a>
+                        <a href="tel:0758861764" className="flex items-center gap-2 text-blue-300 hover:text-white transition-colors">
+                            <span className="text-xl">📞</span> 075 8861764
+                        </a>
+                    </motion.div>
 
                     <motion.form
                         ref={form}
