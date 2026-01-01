@@ -75,7 +75,7 @@ export default function Overlay() {
                 >
                     <motion.div variants={fadeUp} className="mb-4 flex items-center gap-4">
                         <div className="h-[1px] w-20 bg-blue-400/50"></div>
-                        <span className="text-blue-300 tracking-[0.3em] text-sm uppercase font-medium">Portfolio 2026</span>
+                        <span className="text-blue-300 tracking-[0.3em] text-sm uppercase font-medium">NavDev-Portfolio</span>
                     </motion.div>
 
                     <motion.h1 variants={fadeUp} className="text-7xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-8">
