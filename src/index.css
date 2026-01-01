@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* Let clicks pass through to UI if needed, or handle in canvas */
+}
+
+/* We want canvas to handle some events, but UI overlays too. 
+   Common pattern: Canvas at back, UI on top with pointer-events-none, 
+   interactive UI elements with pointer-events-auto. */
+.canvas-container {
+  pointer-events: all; 
+}
+
+.ui-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-bottom: 1px solid rgba(255,255,255,0.1); Debugging aid */
+  pointer-events: none; /* Pass scroll to body */
+}
+
+.section-content {
+  pointer-events: auto; /* Enable interaction for buttons/text */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
