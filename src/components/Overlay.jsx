@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser'
 const Section = (props) => {
     return (
         <section
-            className={`h-screen w-screen flex flex-col justify-center p-8 md:p-20 ${props.mobile ? 'items-center' : ''} ${props.className || ''}`}
+            className={`h-screen w-screen flex flex-col justify-center p-6 md:p-20 ${props.mobile ? 'items-center' : ''} ${props.className || ''}`}
             style={{
                 pointerEvents: 'none'
             }}
@@ -74,29 +74,29 @@ export default function Overlay() {
                     className="max-w-4xl"
                 >
                     <motion.div variants={fadeUp} className="mb-4 flex items-center gap-4">
-                        <div className="h-[1px] w-20 bg-blue-400/50"></div>
-                        <span className="text-blue-300 tracking-[0.3em] text-sm uppercase font-medium">NavDev-Portfolio</span>
+                        <div className="h-[1px] w-12 md:w-20 bg-blue-400/50"></div>
+                        <span className="text-blue-300 tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm uppercase font-medium">NavDev-Portfolio</span>
                     </motion.div>
 
-                    <motion.h1 variants={fadeUp} className="text-7xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-8">
+                    <motion.h1 variants={fadeUp} className="text-5xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-6 md:mb-8">
                         NAMAL<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-slate-400">EKANAYAKE</span>
                     </motion.h1>
 
-                    <motion.p variants={fadeUp} className="text-2xl md:text-3xl text-slate-300 font-light max-w-2xl leading-relaxed">
+                    <motion.p variants={fadeUp} className="text-lg md:text-3xl text-slate-300 font-light max-w-xl md:max-w-2xl leading-relaxed">
                         Crafting digital experiences where <span className="text-white font-normal">software engineering</span> meets <span className="text-blue-300 font-normal">creative design</span>.
                     </motion.p>
 
-                    <motion.div variants={fadeUp} className="mt-12 flex gap-6">
+                    <motion.div variants={fadeUp} className="mt-8 md:mt-12 flex flex-wrap gap-4 md:gap-6">
                         <button
                             onClick={() => scroll.el.scrollTo({ top: 2 * window.innerHeight, behavior: 'smooth' })}
-                            className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform"
+                            className="px-6 py-3 md:px-8 md:py-3 bg-white text-black font-semibold text-sm md:text-base rounded-full hover:scale-105 transition-transform"
                         >
                             View Projects
                         </button>
                         <button
                             onClick={() => scroll.el.scrollTo({ top: 4 * window.innerHeight, behavior: 'smooth' })}
-                            className="px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/20 transition-colors"
+                            className="px-6 py-3 md:px-8 md:py-3 bg-white/10 backdrop-blur-md border border-white/20 text-sm md:text-base rounded-full hover:bg-white/20 transition-colors"
                         >
                             Contact Me
                         </button>
@@ -107,7 +107,7 @@ export default function Overlay() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2, duration: 2 }}
-                    className="absolute bottom-10 right-10 flex flex-col items-end gap-2 opacity-50"
+                    className="absolute bottom-10 right-10 flex flex-col items-end gap-2 opacity-50 hidden md:flex"
                 >
                     <span className="text-xs uppercase tracking-widest text-slate-500">Scroll to Explore</span>
                     <div className="h-20 w-[1px] bg-gradient-to-b from-blue-500 to-transparent"></div>
@@ -117,17 +117,17 @@ export default function Overlay() {
             {/* 2. ABOUT: Glass Card Right */}
             <Section className="items-end justify-center" contentClassName="flex justify-end">
                 <motion.div
-                    className="w-full md:w-[45%] bg-[#0a101f]/60 backdrop-blur-md border border-white/10 p-10 md:p-14 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    className="w-full md:w-[45%] bg-[#0a101f]/80 md:bg-[#0a101f]/60 backdrop-blur-md border border-white/10 p-8 md:p-14 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={stagger}
                 >
-                    <motion.h2 variants={fadeUp} className="text-sm font-bold text-blue-400 uppercase tracking-widest mb-6">About Me</motion.h2>
-                    <motion.h3 variants={fadeUp} className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                    <motion.h2 variants={fadeUp} className="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-widest mb-4 md:mb-6">About Me</motion.h2>
+                    <motion.h3 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight">
                         Software Engineer with a vision for <span className="italic font-serif text-blue-200">perfection</span>.
                     </motion.h3>
-                    <motion.div variants={fadeUp} className="space-y-6 text-lg text-slate-300 font-light leading-relaxed">
+                    <motion.div variants={fadeUp} className="space-y-4 md:space-y-6 text-base md:text-lg text-slate-300 font-light leading-relaxed">
                         <p>
                             I am a 3rd-year undergraduate at NSBM Green University, specializing in building high-performance web applications using React, Three.js, and modern cloud technologies.
                         </p>
@@ -136,14 +136,14 @@ export default function Overlay() {
                         </p>
                     </motion.div>
 
-                    <motion.div variants={fadeUp} className="mt-10 grid grid-cols-2 gap-4">
+                    <motion.div variants={fadeUp} className="mt-8 md:mt-10 grid grid-cols-2 gap-4">
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors">
-                            <div className="text-2xl font-bold text-white mb-1">3+</div>
-                            <div className="text-xs text-slate-400 uppercase tracking-wider">Years Exp</div>
+                            <div className="text-xl md:text-2xl font-bold text-white mb-1">3+</div>
+                            <div className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Years Exp</div>
                         </div>
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors">
-                            <div className="text-2xl font-bold text-white mb-1">20+</div>
-                            <div className="text-xs text-slate-400 uppercase tracking-wider">Projects</div>
+                            <div className="text-xl md:text-2xl font-bold text-white mb-1">20+</div>
+                            <div className="text-[10px] md:text-xs text-slate-400 uppercase tracking-wider">Projects</div>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -158,15 +158,15 @@ export default function Overlay() {
                     viewport={{ once: true }}
                     variants={stagger}
                 >
-                    <motion.h2 variants={fadeUp} className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20 mb-16">
+                    <motion.h2 variants={fadeUp} className="text-4xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20 mb-8 md:mb-16">
                         Selected Work
                     </motion.h2>
 
-                    <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full text-left">
                         <ProjectCard
                             title="Realin Traders"
                             subtitle="American Marketing Agency Platform"
-                            tags={['PayloadCMS', 'TypeScript', 'MongoDB', 'Tailwind']}
+                            tags={['PayloadCMS', 'TypeScript', 'MongoDB']}
                             color="bg-orange-500"
                             link="https://reliance-traders.vercel.app/"
                         />
@@ -180,14 +180,14 @@ export default function Overlay() {
                         <ProjectCard
                             title="Smart Water AI"
                             subtitle="AI-Powered National Water Grid"
-                            tags={['React', 'Tailwind', 'Firebase']}
+                            tags={['React', 'Firebase']}
                             color="bg-blue-500"
                             link="https://aquaalert-delta.vercel.app/"
                         />
                         <ProjectCard
                             title="MindCheck"
                             subtitle="AI Mental Health Assessment Platform"
-                            tags={['React', 'Firebase', 'Gemini AI', 'Recharts']}
+                            tags={['React', 'Firebase', 'Gemini AI']}
                             color="bg-purple-500"
                             link="https://mind-check-mentalhealth.vercel.app/"
                         />
@@ -204,17 +204,17 @@ export default function Overlay() {
                     viewport={{ once: true }}
                     variants={stagger}
                 >
-                    <motion.h2 variants={fadeUp} className="text-8xl font-black text-white/5 mb-[-40px] ml-[-10px] select-none">
+                    <motion.h2 variants={fadeUp} className="text-6xl md:text-8xl font-black text-white/5 mb-[-30px] md:mb-[-40px] ml-[-5px] md:ml-[-10px] select-none">
                         STACK
                     </motion.h2>
-                    <motion.h3 variants={fadeUp} className="text-5xl font-bold mb-12 relative z-10">
+                    <motion.h3 variants={fadeUp} className="text-3xl md:text-5xl font-bold mb-8 md:mb-12 relative z-10">
                         Technical Arsenal
                     </motion.h3>
 
-                    <div className="grid grid-cols-1 gap-8">
-                        <SkillGroup title="Frontend" skills={['React.js', 'Three.js / R3F', 'Tailwind CSS', 'Framer Motion', 'GSAP']} delay={0.1} />
-                        <SkillGroup title="Backend" skills={['Node.js', 'Express', 'Firebase', 'MongoDB', 'Supabase']} delay={0.2} />
-                        <SkillGroup title="Tools" skills={['Git', 'Figma', 'Vite', 'Docker', 'Vercel']} delay={0.3} />
+                    <div className="grid grid-cols-1 gap-6 md:gap-8">
+                        <SkillGroup title="Frontend" skills={['React.js', 'Three.js', 'Tailwind', 'Framer Motion']} delay={0.1} />
+                        <SkillGroup title="Backend" skills={['Node.js', 'Express', 'Firebase', 'MongoDB']} delay={0.2} />
+                        <SkillGroup title="Tools" skills={['Git', 'Figma', 'Vite', 'Docker']} delay={0.3} />
                     </div>
                 </motion.div>
             </Section>
@@ -228,7 +228,7 @@ export default function Overlay() {
                     viewport={{ once: true }}
                     variants={stagger}
                 >
-                    <motion.h2 variants={fadeUp} className="text-5xl md:text-7xl font-bold mb-6">
+                    <motion.h2 variants={fadeUp} className="text-4xl md:text-7xl font-bold mb-6">
                         Let's Talk
                     </motion.h2>
                     <motion.p variants={fadeUp} className="text-xl text-slate-300 mb-12">
