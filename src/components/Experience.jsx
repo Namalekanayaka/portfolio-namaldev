@@ -35,7 +35,8 @@ export default function Experience() {
         const mobX = isMobile ? 0 : -3 // Center on mobile
 
         // 0. INITIAL STATE
-        camera.position.set(isMobile ? 0 : -3, 0, isMobile ? 14 : 8)
+        // Mobile: Move Z far back (22) to fit full height in narrow portrait view
+        camera.position.set(isMobile ? 0 : -3, 0, isMobile ? 22 : 8)
         cameraTarget.current = { x: 0, y: -0.5, z: 0 }
 
         // 1. INTRO
@@ -43,7 +44,7 @@ export default function Experience() {
             .to(camera.position, {
                 x: isMobile ? 0 : -4,
                 y: 0.5,
-                z: isMobile ? 10 : 5,
+                z: isMobile ? 18 : 5,
                 duration: 1.5,
                 ease: "power2.inOut"
             }, 0)
@@ -54,9 +55,9 @@ export default function Experience() {
         // 2. PROJECTS
         tl.current
             .to(camera.position, {
-                x: isMobile ? 2 : 4,
+                x: isMobile ? 1 : 4,
                 y: 1,
-                z: isMobile ? 12 : 6,
+                z: isMobile ? 20 : 6,
                 duration: 2,
                 ease: "power1.inOut"
             }, 1.5)
@@ -68,8 +69,8 @@ export default function Experience() {
         tl.current
             .to(camera.position, {
                 x: 0,
-                y: isMobile ? 8 : 6,
-                z: isMobile ? 6 : 3,
+                y: isMobile ? 6 : 6,
+                z: isMobile ? 15 : 3,
                 duration: 1.5,
                 ease: "power2.inOut"
             }, 4)
@@ -82,7 +83,7 @@ export default function Experience() {
             .to(camera.position, {
                 x: 0,
                 y: -0.5,
-                z: isMobile ? 10 : 6,
+                z: isMobile ? 18 : 6,
                 duration: 1.5,
                 ease: "power2.out"
             }, 5.5)
