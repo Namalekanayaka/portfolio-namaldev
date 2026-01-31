@@ -14,7 +14,7 @@ export default {
         "dark-light": "#1a1a1a",
       },
       fontFamily: {
-         sans: ['Outfit', 'Inter', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'sans-serif'],
       }
     },
   },
