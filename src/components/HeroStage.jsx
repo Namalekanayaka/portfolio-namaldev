@@ -25,7 +25,7 @@ export default function HeroStage({ isMobile }) {
                 <CharacterWrapper />
             </group>
 
-            {/* PODIUM / FLOOR - Hidden on Mobile to remove "Ash Background" */}
+            {/* PODIUM / FLOOR - REMOVED per user request, but keeping code structure if needed later
             {!isMobile && (
                 <group position={[0, -1.05, 0]}>
                     <Cylinder args={[3, 3, 0.1, 64]} receiveShadow>
@@ -34,7 +34,7 @@ export default function HeroStage({ isMobile }) {
                             resolution={1024}
                             mixBlur={1}
                             mixStrength={40}
-                            roughness={0.5} // slightly glossy
+                            roughness={0.5} 
                             depthScale={1.2}
                             minDepthThreshold={0.4}
                             maxDepthThreshold={1.4}
@@ -44,6 +44,7 @@ export default function HeroStage({ isMobile }) {
                     </Cylinder>
                 </group>
             )}
+            */}
         </group>
     )
 }
